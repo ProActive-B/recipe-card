@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{{ recipe.title }}</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1 { text-align: center; }
+ul { list-style: disc; margin-left: 20px; }
+.step { margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<h1>{{ recipe.title }}</h1>
+<p><strong>Servings:</strong> {{ recipe.servings or 'N/A' }}<br>
+<strong>Cook Time:</strong> {{ recipe.cook_time or 'N/A' }}</p>
+<h2>Ingredients</h2>
+<ul>
+{% for ing in recipe.ingredients|safe|eval %}
+<li>{{ ing }}</li>
+{% endfor %}
+</ul>
+<h2>Steps</h2>
+<ol>
+{% for step in recipe.steps|safe|eval %}
+<li class="step">{{ step }}</li>
+{% endfor %}
+</ol>
+</body>
+</html>
