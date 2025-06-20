@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM ghcr.io/library/python:3.12-slim
 
 ENV POETRY_VERSION=1.6.1
 
