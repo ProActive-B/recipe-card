@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg*
+
+# Virtualenv
+venv/
+.env/
+
+# Poetry virtualenv
+.poetry/
+
+# Node
+node_modules/
+.next/
+
+# Logs
+npm-debug.log*
+poetry.lock
+
+# OS files
+.DS_Store
